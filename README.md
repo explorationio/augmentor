@@ -35,9 +35,9 @@ Once the files are ready, the script can be run with this command:
 ```
 
 Args:
-**-a**, **--assets**: Directory for asset files, Default: assets/
-**-i**, **--indir**: Input directory for augmentor, Default: in/
-**-o**, **--outdir**: Output directory, Default: out/
+* **-a**, **--assets**: Directory for asset files, **Default**: `assets/`
+* **-i**, **--indir**: Input directory for augmentor, **Default**: `in/`
+* **-o**, **--outdir**: Output directory, **Default**: `out/`
 
 
 ### Process Flow
