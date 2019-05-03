@@ -48,3 +48,11 @@ Here’s a breakdown of what the script does:
 4. The Custom IDs will be merged and delimited by a pipe `|` character
 5. Asset Label and Asset Title are filled in using the data from the Asset dataframe
 6. The output will be saved as a `.csv` file in the output directory
+
+
+### Testing the script
+To see how the script works, you can run a test using this command:
+```
+(env) $ python test.py
+```
+The test output will be seen in `sample/out/` with the filename: `Company - Report - February 2019.csv`
