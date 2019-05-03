@@ -1,6 +1,5 @@
 import os
 import csv
-import argparse
 import pandas as pd
 import numpy as np
 
@@ -73,9 +72,9 @@ def load_assets(indir):
 def augment_files(source, assets_dir, outdir='out'):
     assets = load_assets(assets_dir)
 
-    if not os.path.exists(outdir):
+    if not os.path.exists(output_directory):
         print('Creating output directory...')
-        os.makedirs(outdir)
+        os.makedirs(output_directory)
         print('Done: Creating output directory.')
         
     for _file in os.listdir(source):
@@ -121,10 +120,8 @@ def augment_files(source, assets_dir, outdir='out'):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Augmentor')
-    parser.add_argument('-a', '--assets', default='assets', type=str, help='Directory for assets')
-    parser.add_argument('-i', '--indir', default='in', type=str, help='Input dir for augmentor')
-    parser.add_argument('-o', '--outdir', default='out', type=str, help='Output dir')
-    args = parser.parse_args()
-    
-    augment_files(args.indir, args.assets, outdir=args.outdir)
+    assets_directory = os.path.join('sample', 'in', 'assets')
+    source_directory = os.path.join('sample', 'in', 'source')
+    output_directory = os.path.join('sample', 'out')
+
+    augment_files(source_directory, assets_directory, outdir=output_directory)
